@@ -1,0 +1,111 @@
+:root {
+    --clr-primary-tomato:  hsl(4, 100%, 67%);
+    --clr-primary-red:  hsl(4, 100%, 50%);
+    --clr-neutrak-dark-grey: hsl(234, 29%, 20%);
+    --clr-neutral-grey: hsl(231, 7%, 60%);
+    --clr-neutral-charcoal-grey: hsl(235, 18%, 26%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --fz-regular: 1rem;
+    --fz-larger: 3rem;
+    --ff-main: 'Roboto', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+    background-color: var(--clr-neutral-charcoal-grey);
+    font-family: var(--ff-main);
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-start {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-neutral-white);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    max-width: 900px;
+}
+.content-section {
+    margin: 3rem;
+}
+.grid-group {
+    display: grid;
+    gap: 1rem;
+}
+.title {
+    font-size: var(--fz-larger);
+    margin: 2rem 0;
+}
+.informations__description {
+    font-size: var(--fz-regular);
+}
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.informations__update-list > li {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    padding: .3rem;
+}
+.informations__update-list > li::before {
+    content: url(./assets/images/icon-list.svg);
+}
+input[type=email] {
+    padding: .8rem;
+    border-radius: .5rem;
+    border: 1px solid var(--clr-neutral-grey);
+    cursor: pointer;
+}
+input[type=email]:is(:hover, :active) {
+    border: 1px solid var(--clr-neutrak-dark-grey);
+}
+.button {
+    padding: .8rem;
+    cursor: pointer;
+    background-color: var(--clr-neutrak-dark-grey);
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-bold);
+    border-radius: .5rem;
+    border: none;
+}
+.button:hover {
+    background: linear-gradient(60deg, var(--clr-primary-red), var(--clr-primary-tomato));
+    box-shadow: 0 .3rem 1rem var(--clr-primary-tomato);
+}
+.form-end {
+    display: none;
+}
