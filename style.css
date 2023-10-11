@@ -1,6 +1,6 @@
 :root {
     --clr-primary-tomato:  hsl(4, 100%, 67%);
-    --clr-primary-red:  hsl(4, 100%, 50%);
+    --clr-primary-rose:  hsl(342, 100%, 71%);
     --clr-neutrak-dark-grey: hsl(234, 29%, 20%);
     --clr-neutral-grey: hsl(231, 7%, 60%);
     --clr-neutral-charcoal-grey: hsl(235, 18%, 26%);
@@ -103,9 +103,17 @@ input[type=email]:is(:hover, :active) {
     border: none;
 }
 .button:hover {
-    background: linear-gradient(60deg, var(--clr-primary-red), var(--clr-primary-tomato));
+    background: linear-gradient(60deg, var(--clr-primary-rose), var(--clr-primary-tomato));
     box-shadow: 0 .3rem 1rem var(--clr-primary-tomato);
 }
 .form-end {
     display: none;
+    background-color: var(--clr-neutral-white);
+    border-radius: 2rem;
+    max-width: 470px;
+    padding: 3rem;
+}
+.title-end {
+    font-size: var(--fz-larger);
+    margin-top: 1.5rem;
 }
