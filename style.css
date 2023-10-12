@@ -1,5 +1,5 @@
 :root {
-    --clr-primary-tomato:  hsl(4, 100%, 67%);
+    --clr-primary-tomato: hsl(4, 100%, 67%);
     --clr-primary-rose:  hsl(342, 100%, 71%);
     --clr-neutrak-dark-grey: hsl(234, 29%, 20%);
     --clr-neutral-grey: hsl(231, 7%, 60%);
@@ -51,12 +51,15 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--clr-neutral-white);
-    padding: 1.5rem;
     border-radius: 2rem;
     max-width: 900px;
 }
 .content-section {
+    padding: 1.5rem;
     margin: 3rem;
+}
+.images {
+    padding: 1.5rem;
 }
 .grid-group {
     display: grid;
@@ -93,6 +96,17 @@ input[type=email] {
 input[type=email]:is(:hover, :active) {
     border: 1px solid var(--clr-neutrak-dark-grey);
 }
+.form-required {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -.3rem;
+    font-weight: var(--fw-bold);
+}
+.email-required-message {
+    color: var(--clr-primary-tomato);
+    font-weight: var(--fw-bold);
+    display: none;
+}
 .button {
     padding: .8rem;
     cursor: pointer;
@@ -112,8 +126,21 @@ input[type=email]:is(:hover, :active) {
     border-radius: 2rem;
     max-width: 470px;
     padding: 3rem;
+    gap: 2rem;
 }
 .title-end {
     font-size: var(--fz-larger);
-    margin-top: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .form-start {
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    .images {
+        padding: 0;
+    }
+    .content-section {
+        margin: 0;
+    }
 }
