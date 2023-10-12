@@ -93,7 +93,7 @@ input[type=email] {
     border: 1px solid var(--clr-neutral-grey);
     cursor: pointer;
 }
-input[type=email]:is(:hover, :active) {
+input[type=email]:hover {
     border: 1px solid var(--clr-neutrak-dark-grey);
 }
 .form-required {
@@ -143,4 +143,18 @@ input[type=email]:is(:hover, :active) {
     .content-section {
         margin: 0;
     }
+    .form-end {
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 1.2rem;
+    }
+    .form-end > .form-end__wrapper {
+        display: grid;
+        margin-top: 4rem;
+    }
+    .form-end > button {
+        max-height: 3.4rem;
+        align-self: self-end;
+    }
+
 }

@@ -14,6 +14,9 @@ function changeFormStatus(e) {
 
     if (!emailPattern.test(emailValue)) {
         emailRequiredMessage.style.display = 'block';
+        inputEmail.style.border = '2px solid var(--clr-primary-tomato)';
+        inputEmail.style.backgroundColor = 'hsla(4, 100%, 67%, 0.2)';
+        inputEmail.style.color = 'var(--clr-primary-tomato)';
     } else {
         emailRequiredMessage.style.display = 'none';
         formStart.style.display = 'none';
